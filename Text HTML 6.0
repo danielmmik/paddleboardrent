@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Půjčovna Paddleboardů</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f0f8ff; color: #333; }
+    header { background: #0077b6; color: white; padding: 20px; text-align: center; }
+    nav a { margin: 0 15px; color: white; text-decoration: none; font-weight: bold; }
+    .container { padding: 20px; max-width: 1000px; margin: auto; }
+    .board { border: 1px solid #ccc; padding: 15px; margin: 10px 0; border-radius: 8px; background: white; }
+    h2 { color: #0077b6; }
+    form { background: white; padding: 20px; border-radius: 8px; border: 1px solid #ccc; }
+    label { display: block; margin: 10px 0 5px; }
+    input, select, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    button { padding: 10px 20px; background: #0077b6; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    footer { text-align: center; padding: 20px; background: #0077b6; color: white; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Půjčovna Paddleboardů</h1>
+  <nav>
+    <a href="#nabidka">Nabídka</a>
+    <a href="#rezervace">Rezervace</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <section id="nabidka">
+    <h2>Nabídka Paddleboardů</h2>
+    <div class="board">
+      <h3>Paddleboard Standard</h3>
+      <p>Nosnost: 150 kg. Cena: 15 € na den.</p>
+      <p>Pokud chcete, dovezeme paddleboard na váš apartmán za 5 €.</p>
+      <p><strong>Vybírá se vratná záloha 50 €.</strong></p>
+    </div>
+
+    <h3>Ceník:</h3>
+    <ul>
+      <li>1 den – 15 €</li>
+      <li>2 dny – 25 €</li>
+      <li>3 dny – 35 €</li>
+      <li>5 dní – 55 €</li>
+      <li>7 dní – 70 €</li>
+    </ul>
+  </section>
+
+  <section id="rezervace">
+    <h2>Rezervace</h2>
+    <form action="https://formsubmit.co/paddleboardrent@email.cz" method="POST">
+      <input type="hidden" name="_subject" value="Nová rezervace paddleboardu!">
+      <input type="hidden" name="_next" value="https://tvujweb.github.io/dekujeme.html">
+
+      <label for="name">Jméno a příjmení:</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="phone">Telefonní číslo:</label>
+      <input type="text" name="phone" id="phone" required>
+
+      <label for="board">Vyber paddleboard:</label>
+      <select name="board" id="board">
+        <option value="Standard">Paddleboard Standard</option>
+      </select>
+
+      <label for="days">Počet dnů:</label>
+      <select name="days" id="days">
+        <option value="1">1 den</option>
+        <option value="2">2 dny</option>
+        <option value="3">3 dny</option>
+        <option value="5">5 dní</option>
+        <option value="7">7 dní</option>
+      </select>
+
+      <label for="date">Datum rezervace:</label>
+      <input type="date" name="date" id="date" required>
+
+      <label for="delivery">Doprava na apartmán (5 €):</label>
+      <select name="delivery" id="delivery">
+        <option value="Ne">Ne (osobní vyzvednutí v kanceláři MyAlbania v Durrës)</option>
+        <option value="Ano">Ano (dovezeme na apartmán)</option>
+      </select>
+
+      <label for="apartmentNumber">Číslo apartmánu:</label>
+      <input type="text" name="apartmentNumber" id="apartmentNumber" placeholder="Například: 578, 974, 1156" required>
+
+      <label for="note">Poznámka k rezervaci:</label>
+      <textarea name="note" id="note" rows="4" placeholder="Zde můžete napsat poznámku..."></textarea>
+
+      <button type="submit">Odeslat rezervaci</button>
+    </form>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>E-mail: paddleboardrent@email.cz</p>
+    <p>Telefon: +420 720 043 833</p>
+    <p>Adresa: Rruga, Durrës</p>
+    <p>
+      Instagram: @paddleboardrent<br>
+      Facebook: Paddleboardrent AI
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  &copy; 2025 Půjčovna Paddleboardů – Všechna práva vyhrazena
+</footer>
+
+</body>
+</html>
